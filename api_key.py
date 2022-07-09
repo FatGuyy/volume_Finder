@@ -1,2 +1,2 @@
-
-API_KEY = "c903fb80-14a8-45b4-8ee4-a61a47c9e0c2"
+#put in your coinmarketcap api key
+API_KEY = ""
