@@ -1,16 +1,21 @@
 #Using api to fetch the data.
-
+from email.header import Header
 import os
+from urllib import response
 import requests
-import constants
+import constants, api_key
 from pprint import pprint as pp
 
-#from selenium import webdriver
-#os.environ['PATH'] += r'.\chromedriver.chromedriver.exe'
-#driver = webdriver.Chrome()
+url = ' https://pro-api.coinmarketcap.com/v1/exchange/map'
+headers = {
+  'Accepts': 'application/json',
+  'X-CMC_PRO_API_KEY': api_key.API_KEY,
+}
 
 #get the request and fetch the data
-response = requests.get('')
+r = requests.get(url, headers=headers)
+pp(r.json()['data'][69])
+
 
 #Work with the data and get volume in a list
 
